@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CorpMart - Shop Your Style</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="header-content container">
+            <h1 class="site-title"><a href="index.html">CorpMart</a></h1>
+            <div class="header-search">
+                <input type="text" id="search-input" placeholder="Search products...">
+                <button id="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="index.html" data-nav="home"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#" data-nav="best-sellers"><i class="fas fa-fire"></i> Best Sellers</a></li>
+                    <li><a href="account.html" data-nav="account"><i class="fas fa-user"></i> Account</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content container">
+        <aside class="filters-sidebar">
+            <h2>Filters</h2>
+
+            <div class="filter-section">
+                <h3>Categories</h3>
+                <div id="category-filters">
+                    <p style="color: var(--text-medium);">Loading categories...</p>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Price Range</h3>
+                <div class="price-inputs">
+                    <input type="number" id="min-price" placeholder="Min Price">
+                    <input type="number" id="max-price" placeholder="Max Price">
+                </div>
+                <button id="apply-price-filter" class="primary-btn">Apply Price</button>
+            </div>
+
+            <div class="filter-section">
+                <h3>Sort By</h3>
+                <select id="sort-by" class="styled-select">
+                    <option value="default">Default</option>
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                    <option value="rating-desc">Rating: High to Low</option>
+                    <option value="name-asc">Name: A-Z</option>
+                </select>
+            </div>
+
+            <button id="reset-filters" class="secondary-btn">Reset All Filters</button>
+        </aside>
+
+        <section class="product-content">
+            <p class="product-count">Displaying <span id="displayed-product-count">0</span> products</p>
+            <div id="product-grid">
+                </div>
+            <div id="no-products-message" style="display: none;">
+                <p>No products found matching your criteria.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <div class="footer-content container">
+            <p>&copy; 2025 CorpMart. All rights reserved.</p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
