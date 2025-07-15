@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CorpMart - My Account</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="account.css"> </head>
+<body>
+    <header class="page-header">
+        <div class="header-content container">
+            <h1 class="site-title"><a href="index.html">CorpMart</a></h1>
+            <div class="header-search">
+                <input type="text" id="search-input" placeholder="Search products...">
+                <button id="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="index.html" data-nav="home"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#" data-nav="best-sellers"><i class="fas fa-fire"></i> Best Sellers</a></li>
+                    <li><a href="account.html" data-nav="account"><i class="fas fa-user"></i> Account</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content container">
+        <section class="account-section">
+            <h2>My Account</h2>
+            <div class="account-info-card">
+                <h3>Account Details</h3>
+                <p><strong>Name:</strong> John Doe</p>
+                <p><strong>Email:</strong> john.doe@example.com</p>
+                <p><strong>Member Since:</strong> January 1, 2024</p>
+                <p><strong>Account Type:</strong> Standard</p>
+                <button id="logout-btn" class="secondary-btn">Logout</button>
+            </div>
+
+            <div class="account-section-card">
+                <h3>My Likes (<span id="liked-count">0</span> items)</h3>
+                <div id="liked-products-grid" class="product-grid">
+                    <p class="empty-message" id="empty-likes-message" style="display: none;">You haven't liked any items yet.</p>
+                </div>
+            </div>
+
+            <div class="account-section-card">
+                <h3>My Cart (<span id="cart-count-display">0</span> items)</h3>
+                <div id="cart-items-list">
+                    <p class="empty-message" id="empty-cart-message" style="display: none;">Your cart is empty.</p>
+                </div>
+                <div id="cart-summary" style="display: none;">
+                    <p><strong>Total:</strong> $<span id="cart-total">0.00</span></p>
+                    <button class="primary-btn">Proceed to Checkout</button>
+                    <button id="clear-cart-btn" class="secondary-btn">Clear Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <div class="footer-content container">
+            <p>&copy; 2025 CorpMart. All rights reserved.</p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="account.js" defer></script>
+</body>
+</html>
