@@ -1,0 +1,326 @@
+.account-section {
+    flex: 1;
+    min-width: 0; /* Allow it to shrink in flex layout */
+    padding: 30px;
+    background-color: var(--background-card);
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 4px 15px var(--shadow-light);
+}
+
+.account-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: var(--text-dark);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+    font-weight: 600;
+}
+
+.account-info-card, .account-section-card {
+    background-color: #fcfcfc; /* Slightly different background for sub-cards */
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03); /* Very light shadow */
+}
+
+.account-info-card h3, .account-section-card h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--primary-dark);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.account-info-card p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.account-info-card p strong {
+    color: var(--text-dark);
+}
+
+.account-info-card .secondary-btn {
+    margin-top: 25px;
+    width: auto; /* Don't force full width for logout */
+    padding: 10px 20px;
+}
+
+/* Specific styling for grids within account sections */
+.account-section-card .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Slightly smaller cards */
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.account-section-card .product-card {
+    /* Inherit styles from main style.css for general card look */
+    /* Adjustments for smaller cards */
+    padding: 10px;
+    min-height: 280px; /* Ensure consistent height */
+}
+
+.account-section-card .product-card .image-container {
+    height: 120px; /* Smaller image container */
+}
+
+.account-section-card .product-card h4 {
+    font-size: 0.9rem;
+    min-height: unset; /* Allow height to adjust naturally */
+    -webkit-line-clamp: 2;
+}
+
+.account-section-card .product-card .price {
+    font-size: 1.1rem;
+}
+
+.account-section-card .add-to-cart-btn {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+    margin-top: 10px;
+}
+
+.empty-message {
+    text-align: center;
+    color: var(--text-medium);
+    font-size: 1.1rem;
+    padding: 30px;
+    background-color: #f5f5f5;
+    border-radius: var(--border-radius-sm);
+    margin-top: 20px;
+}
+
+/* Cart Items List */
+#cart-items-list {
+    margin-top: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px dashed var(--border-color);
+}
+.cart-item:last-of-type {
+    border-bottom: none;
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    padding: 5px;
+    background-color: white;
+}
+
+.cart-item .item-details {
+    flex-grow: 1;
+}
+
+.cart-item h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: var(--text-dark);
+}
+
+.cart-item p {
+    font-size: 0.9rem;
+    color: var(--text-medium);
+    margin-bottom: 8px;
+}
+
+.cart-item .quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+.cart-item .quantity-btn {
+    background-color: var(--primary-color);
+    color: var(--text-dark);
+    border: 1px solid var(--primary-dark);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.cart-item .quantity-btn:hover {
+    background-color: var(--primary-dark);
+    color: white;
+}
+
+.cart-item .remove-from-cart-btn {
+    background-color: #e74c3c; /* Red for remove */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.cart-item .remove-from-cart-btn:hover {
+    background-color: #c0392b;
+}
+
+#cart-summary {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    text-align: right;
+}
+
+#cart-summary p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+#cart-summary button {
+    width: auto;
+    display: inline-block;
+    margin-left: 15px;
+    padding: 12px 25px;
+    font-size: 1rem;
+}
+#cart-summary button.secondary-btn {
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+}
+#cart-summary button.secondary-btn:hover {
+    background-color: var(--secondary-dark);
+    color: white;
+}
+
+
+/* Responsive adjustments for account page */
+@media (max-width: 992px) {
+    .account-section {
+        padding: 25px;
+    }
+    .account-section h2 {
+        font-size: 2rem;
+    }
+    .account-info-card h3, .account-section-card h3 {
+        font-size: 1.3rem;
+    }
+    .account-section-card .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .cart-item .remove-from-cart-btn {
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 768px) {
+    .account-section {
+        padding: 20px;
+    }
+    .account-section h2 {
+        font-size: 1.8rem;
+    }
+    .account-info-card h3, .account-section-card h3 {
+        font-size: 1.2rem;
+    }
+    .account-section-card .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+    .cart-item h4 {
+        font-size: 1rem;
+    }
+    .cart-item .quantity-controls, .cart-item p {
+        font-size: 0.85rem;
+    }
+    #cart-summary button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .account-section {
+        padding: 15px;
+    }
+    .account-section h2 {
+        font-size: 1.6rem;
+    }
+    .account-info-card, .account-section-card {
+        padding: 15px;
+    }
+    .account-info-card h3, .account-section-card h3 {
+        font-size: 1.1rem;
+    }
+    .account-section-card .product-grid {
+        grid-template-columns: 1fr; /* Stack cards vertically */
+    }
+    .account-section-card .product-card {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+        min-height: unset;
+        padding: 12px;
+    }
+    .account-section-card .product-card .image-container {
+        flex: 0 0 80px;
+        height: 80px;
+    }
+    .account-section-card .product-card .product-details {
+        flex-grow: 1;
+    }
+    .account-section-card .product-card h4 {
+        font-size: 0.95rem;
+    }
+    .account-section-card .product-card .price {
+        font-size: 1.1rem;
+    }
+    .account-section-card .product-card .like-button {
+        position: static;
+        margin-left: auto;
+        width: 35px;
+        height: 35px;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .cart-item img {
+        width: 60px;
+        height: 60px;
+    }
+    .cart-item h4 {
+        font-size: 0.95rem;
+    }
+    .cart-item .remove-from-cart-btn {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+    #cart-summary button {
+        margin-top: 10px;
+        width: 100%;
+        margin-left: 0;
+    }
+}
